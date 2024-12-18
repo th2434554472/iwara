@@ -11,7 +11,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
       </div>
     </div>
     <a class="header-logo" href="/">
-      <SvgIcon class="logo" name="logo" width="36px" height="36px" />
+      <SvgIcon class="logo" name="logo" width="36px" height="36px" fill="black"/>
       <div class="header-text">Iwara</div>
     </a>
   </div>
