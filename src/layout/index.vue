@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from './header/index.vue'
+import Slider from './slider/index.vue'
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import Header from './header/index.vue'
     </div>
     <!-- 左侧菜单-->
     <div class="layout-slider">
-      <div>左侧菜单</div>
+      <Slider/>
     </div>
     <!-- 内容区-->
     <div class="layout-content">
@@ -32,6 +33,7 @@ import Header from './header/index.vue'
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
   }
   .layout-slider {
     width: $base-slider-width;
@@ -39,6 +41,7 @@ import Header from './header/index.vue'
     background: #e8e8e8;
     position: relative;
     top: $base-header-height;
+    z-index: 100;
   }
 }
 </style>

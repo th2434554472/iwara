@@ -21,11 +21,13 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
       <el-form-item>
         <el-input placeholder="search"/>
       </el-form-item>
-      <el-button type="info">
-        <div>
-          <SvgIcon name="search" width="18px" height="18px" />
-        </div>
-      </el-button>
+      <el-form-item>
+        <el-button type="info">
+          <div>
+            <SvgIcon name="search" width="18px" height="18px" />
+          </div>
+        </el-button>
+      </el-form-item>
     </el-form>
   </div>
   <!-- 顶部导航右侧 -->
@@ -55,7 +57,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .header-left {
   display: flex;
   align-items: center;
@@ -83,8 +85,20 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
 }
 
 .header-search {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
   .search-box {
     display: flex;
+    align-items: center;
+    .el-form-item {
+      margin-bottom: 0;
+    }
+    .el-input {
+      width: 500px;
+      /* height: 60px; */
+    }
   }
 }
 
