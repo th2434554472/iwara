@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './header/index.vue'
 import Slider from './slider/index.vue'
+import Main from './main/index.vue'
 </script>
 
 <template>
@@ -15,7 +16,7 @@ import Slider from './slider/index.vue'
     </div>
     <!-- 内容区-->
     <div class="layout-content">
-
+      <Main/>
     </div>
   </div>
 </template>
@@ -42,6 +43,13 @@ import Slider from './slider/index.vue'
     position: relative;
     top: $base-header-height;
     z-index: 100;
+  }
+  .layout-content {
+    width: calc(100% - $base-slider-width);
+    position: absolute;
+    top: $base-header-height;
+    left: $base-slider-width;
+    padding: 10px;
   }
 }
 </style>

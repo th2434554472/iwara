@@ -11,7 +11,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
       </div>
     </div>
     <a class="header-logo" href="/">
-      <SvgIcon class="logo" name="logo" width="36px" height="36px" fill="black"/>
+      <SvgIcon class="logo" name="logo" width="36px" height="36px" />
       <div class="header-text">Iwara</div>
     </a>
   </div>
@@ -106,7 +106,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
   display: flex;
   align-items: center;
   a {
-    padding: 30px 15px;
+    padding: 21px 15px;
     .money-text {
       font-size: 1.05rem;
       color: #dda82b;

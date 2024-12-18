@@ -17,5 +17,20 @@ export const constantRoutes =  [
                 }
             }
         ]
+    },
+    {
+        path: '/search',
+        component: () => import('@/layout/index.vue'),
+        name: 'search',
+        children: [
+            {
+                path: '/search',
+                component: () => import('@/views/search/index.vue'),
+                meta: {
+                    title: '搜索页',
+                    icon: 'SearchFilled'
+                }
+            }
+        ]
     }
 ]
