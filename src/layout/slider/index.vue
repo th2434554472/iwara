@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import SvgIcon from '@/components/SvgIcon/index.vue'
+import useUserStore from '@/stores/modules/user';
+import Menu from '../menu/index.vue';
+
+const userStore = useUserStore();
+console.log(userStore.menuRoutes);
+
 </script>
+
 <template>
   <div class="menu">
-    <ul>
+    <Menu :menuList="userStore.menuRoutes"/>
+    <!-- <ul>
       <li>
         <a href="#" class="menu-item active">
           <div class="icon">
@@ -17,7 +24,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
       <li><a href="#">高级会员</a></li>
       <li><a href="#">Wura</a></li>
       <li><a href="#">常见问题</a></li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -26,19 +33,23 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
   a {
     color: black;
     display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    .icon {
+      margin-right: 20px;
+    }
     &.active {
       background: #19b898;
     }
+    &:hover {
+      background-color: #C9BAE1;
+    }
     li {
       background-color: gray;
-      padding: 10px;
       margin: 1px 0;
-      border-radius: 10px;
       text-align: center;
-
-      &:hover {
-        background-color: aquamarine
-      }
     }
   }
 }

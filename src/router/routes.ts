@@ -1,36 +1,49 @@
+import Layout from '@/layout/index.vue';
+import Home from '@/views/home/index.vue';
+import Search from '@/views/search/index.vue';
+import Link from '@/views/link/index.vue';
 // 对外暴露路由配置
-export const constantRoutes =  [
+export default [
     {
         // 主页
         path: '/',
-        component: () => import('@/layout/index.vue'),
+        component: Layout,
         name: 'index',
         redirect: '/home',
+        meta: {
+            title: Layout
+        },
         children: [
             {
                 path: '/home',
-                component: () => import('@/views/home/index.vue'),
+                component: Home,
                 name: 'home',
                 meta: {
                     title: '首页',
-                    icon: 'HomeFilled'
+                    icon: 'HomeFilled',
+                    hidden: false
+                }
+            },
+            {
+                path: '/search',
+                component: Search,
+                name: 'search',
+                meta: {
+                    title: '搜索页',
+                    icon: 'SearchFilled',
+                    hidden: false
+                }
+            },
+            {
+                path: '/link',
+                component: Link,
+                name: 'link',
+                meta: {
+                    title: 'リンクページ',
+                    icon: 'SearchFilled',
+                    hidden: false
                 }
             }
         ]
     },
-    {
-        path: '/search',
-        component: () => import('@/layout/index.vue'),
-        name: 'search',
-        children: [
-            {
-                path: '/search',
-                component: () => import('@/views/search/index.vue'),
-                meta: {
-                    title: '搜索页',
-                    icon: 'SearchFilled'
-                }
-            }
-        ]
-    }
 ]
